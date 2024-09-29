@@ -1,48 +1,12 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+import { gql } from 'apollo-boost';
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    createTodo(input: $input, condition: $condition) {
-      id
-      name
-      description
-      createdAt
-      updatedAt
-      __typename
+export const updateUser = gql`
+    mutation UpdateUser($input: UpdateUserInput!) {
+        updateUser(input: $input) {
+            id
+            name
+            email
+            // Add other fields you need
+        }
     }
-  }
-`;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    updateTodo(input: $input, condition: $condition) {
-      id
-      name
-      description
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    deleteTodo(input: $input, condition: $condition) {
-      id
-      name
-      description
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
 `;

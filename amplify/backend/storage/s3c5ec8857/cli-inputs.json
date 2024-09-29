@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3c5ec8857",
+  "policyUUID": "c5ec8857",
+  "bucketName": "hobbywebapp1633e1a6661642e2a59e539741d8dd1d",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Triggerda7be892",
+  "groupAccess": {}
+}
