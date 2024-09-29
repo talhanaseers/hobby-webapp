@@ -1,4 +1,5 @@
 import React from 'react';
+import './custom-styles.css';
 
 // AWS imports
 import { Authenticator } from '@aws-amplify/ui-react';
