@@ -1,0 +1,260 @@
+/* Container for Profile and Expanded Box */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the container horizontally */
+    position: relative;
+    height: 100vh; /* Ensure the container takes full viewport height */
+    transition: all 0.5s ease; /* Smooth transition for the container */
+}
+
+/* Expanded state */
+.profile-container.expanded .profile-page {
+    transform: translateX(220px); /* Move the phone to the right */
+    transition: transform 0.5s ease; /* Smooth slide transition */
+}
+
+.profile-container.expanded .expanded-box {
+    opacity: 1; /* Make the box visible */
+    transition: opacity 0.5s ease; /* Smooth fade-in transition */
+}
+
+/* Profile page styling to resemble an iPhone */
+.profile-page {
+    background-color: #f9f9f9;
+    width: 375px; /* iPhone width */
+    height: 667px; /* iPhone height */
+    padding: 20px; /* Unified padding */
+    border: 10px solid rgb(62, 62, 62);
+    border-radius: 40px; /* More rounded corners for an iPhone look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    text-align: center;
+    position: relative;
+    overflow-y: scroll; /* Allow vertical scrolling */
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    z-index: 10; /* Ensure it's above other elements */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Custom Scrollbar Styling */
+.profile-page::-webkit-scrollbar {
+    width: 8px; /* Adjust width of scrollbar */
+}
+
+.profile-page::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of scrollbar track */
+    border-radius: 10px; /* Rounded corners for scrollbar track */
+}
+
+.profile-page::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for scrollbar thumb */
+}
+
+.profile-page::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color when hovering over scrollbar thumb */
+}
+
+/* Gear Icon Button Styling */
+.expand-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 24px; /* Larger font size for the gear icon */
+    cursor: pointer;
+    z-index: 20; /* Above everything else */
+    transition: color 0.3s ease;
+}
+
+.expand-button:hover {
+    color: #1783cc; /* Highlight color on hover */
+}
+
+/* Expanded Box Styling */
+.expanded-box {
+    width: 375px; /* Same width as the profile page */
+    height: 667px; /* Same height as the profile page */
+    background-color: #eeeeee; /* Light background color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 2px solid #000; /* Black border outline */
+    border-radius: 40px; /* Match the rounded corners of the main rectangle */
+    padding: 20px; /* Unified padding */
+    position: absolute;
+    left: -375px; /* Position off the screen initially */
+    opacity: 0; /* Hidden by default */
+    z-index: 5; /* Below the profile page */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align elements at the top */
+    align-items: center; /* Center elements horizontally */
+    transition: opacity 0.5s ease, left 0.5s ease; /* Smooth fade-in and left transition */
+    overflow-y: scroll; /* Enable scrolling if content exceeds the height */
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Input Section Styling */
+.input-section {
+    margin-bottom: 20px; /* Space between input sections */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center inputs */
+}
+
+/* Input Label Styling */
+.input-label {
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold;
+    color: #333;
+}
+
+/* File Input Styling */
+.file-input {
+    width: 70%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space below the file input */
+}
+
+/* Text Input Styling */
+.text-input {
+    width: 70%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 20px; /* Space below the text input */
+}
+
+/* Close Button for Expanded Box */
+.close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #555; /* Slightly lighter color on hover */
+}
+
+/* Header with Name, Profile Pic, and Location */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* Space below header */
+}
+
+/* USER NAME */
+.name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px; /* Space below name */
+}
+
+/* USER LOCATION */
+.location {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px; /* Space below profile pic */
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: white;
+    overflow: hidden;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Large Portrait Photo Styling */
+.cover-photo {
+    position: relative;
+    margin-top: 10px;
+    width: 100%; /* Full width */
+    height: 450px; /* Fixed height for uniformity */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    object-fit: cover;
+}
+
+/* Interests inside the portrait */
+.interests {
+    position: absolute;
+    bottom: 15px; /* Lower position to fit buttons */
+    left: 50%;
+    transform: translateX(-50%); /* Center the container */
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    gap: 6px; /* Space between buttons */
+    width: auto; /* Adjust width to fit content */
+}
+
+/* Smaller interest buttons to fit 5 inside the portrait */
+.interest-btn {
+    padding: 4px 7px; /* Smaller padding */
+    background-color: black; /* Black buttons */
+    color: white; /* White text */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold; /* Bold font */
+}
+
+.interest-btn:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}
+
+/* BIO */
+body {
+    background-color: #162b3b;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 10px; /* 10px from the top of the viewport */
+    left: 10px; /* 10px from the left of the viewport */
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100; /* Make sure it's on top of everything */
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #1783cc; /* Highlight color on hover */
+}

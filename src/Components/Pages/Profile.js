@@ -2,6 +2,7 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
+import './custom-styles.css';
 
 import SiteNav from "../Commons/SiteNav";
 import SiteFooter from "../Commons/SiteFooter";
