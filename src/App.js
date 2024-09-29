@@ -16,12 +16,19 @@ Amplify.configure(awsconfig); // Configuring Amplify with your AWS configuration
 
 function App() {
   return (
-    <div>
-      <div>
-        <img src={logo} alt="Hobn'Go Logo" style={{ width: '100px', height: 'auto' }} /> {/* Adjust size as needed */}
-        <h1>Hobn'Go</h1>
+    <div className="App">
+      <div className="center-box">
+        <img src={logo} alt="Hobn'Go Logo" className="App-logo" />
+        <text className='description'>
+          Looking to connect with others who share your passions? 
+          Our platform makes it easy to find people with the same hobbies, 
+          whether you're into sports, arts, gaming, or anything else. 
+          Join today and start building meaningful connections around the things you love!
+        </text>
         <h3>
-          <Link to='/Journal'>Create an account or login to get started</Link>
+          <Link to='/Journal' className="App-link">
+            Login or Create Account
+          </Link>
         </h3>
       </div>
       <SiteFooter />
