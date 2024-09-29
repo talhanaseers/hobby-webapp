@@ -1,4 +1,11 @@
+
 import React, { useEffect, useState } from 'react';
+
+import React from 'react';
+import './custom-styles.css';
+
+// AWS imports
+
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
