@@ -1,0 +1,186 @@
+/* Matchmaking page styling to resemble an iPhone */
+.matchmaking-page {
+  background-color: white;
+  width: 100%;
+  max-width: 375px; /* iPhone width */
+  height: 667px; /* iPhone height */
+  padding: 20px;
+  border: 10px solid rgb(106, 223, 255);
+  border-radius: 40px; /* More rounded corners for an iPhone look */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  text-align: center;
+  position: absolute; /* Absolute positioning for dragging */
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Center the element */
+  overflow-y: scroll; /* Allow vertical scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  cursor: grab; /* Show the grab cursor */
+  transition: all 0.5s ease; /* Smooth transition for snapping back */
+  user-select: none; /* Prevent text selection */
+  z-index: 10;
+}
+
+/* Prevent pointer events when dragging */
+.no-interaction {
+  pointer-events: none; /* Disable all pointer events */
+}
+
+/* Custom Scrollbar Styling */
+.matchmaking-page::-webkit-scrollbar {
+  width: 8px; /* Adjust width of scrollbar */
+}
+
+.matchmaking-page::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of scrollbar track */
+  border-radius: 10px; /* Rounded corners for scrollbar track */
+}
+
+.matchmaking-page::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for scrollbar thumb */
+}
+
+.matchmaking-page::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color when hovering over scrollbar thumb */
+}
+
+/* Header with Name, Match Pic, and Description */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px; /* Removed the overlap issue */
+  padding: 0 20px;
+}
+
+/* MATCHMAKING NAME */
+.name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px; /* Space between name and description */
+}
+
+/* MATCHMAKING DESCRIPTION */
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 15px; /* Space below match pic */
+}
+
+/* LOCATION Styling */
+.location {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px; /* Space below profile pic */
+}
+
+/* Match Pic Styling */
+.match-pic {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #162b3b;
+  background-color: white;
+  overflow: hidden;
+  z-index: 10; /* Ensure it's above the portrait photo */
+}
+
+.match-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Large Portrait Photo Styling */
+.cover-photo {
+  position: relative;
+  margin-top: 10px;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%; /* Full height of the container */
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #162b3b; /* Correct way to define the border */
+}
+
+/* Interests inside the portrait */
+.interests {
+  position: absolute;
+  padding-left: 10px;
+  bottom: 15px; /* Lower position to fit buttons */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start; /* Spread buttons evenly */
+  gap: 6px;
+  flex-wrap: wrap; /* Wrap buttons if necessary */
+}
+
+/* Smaller interest buttons to fit 5 inside the portrait */
+.interest-btn {
+  padding: 4px 7px; /* Smaller padding */
+  background-color: black; /* Black buttons */
+  color: white; /* White text */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem; /* Reduced font size */
+  font-weight: bold; /* Bold font */
+  width: auto; /* Make sure 5 buttons fit, adjust based on gap */
+}
+
+.interest-btn:hover {
+  background-color: #333; /* Slightly lighter black on hover */
+}
+
+.trash-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10rem;
+  color: #00a305;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10rem;
+  color: #ff00d0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.trash-icon {
+  left: 20px;
+}
+
+.heart-icon {
+  right: 20px;
+}
+
+/* Remaining CSS for the Matchmaking page */
+.matchmaking-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Other styles */
+.interest-btn {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
