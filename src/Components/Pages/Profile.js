@@ -309,7 +309,7 @@ export default function Profile() {
         <>
           <SiteNav user={user} signOut={signOut} />
           <div className="profile-container">
-          <h2 style={{ textAlign: "center" }}>Your Profile</h2>
+          
 
             <div style={{ textAlign: "center" }}>
             <Image
