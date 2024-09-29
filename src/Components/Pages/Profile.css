@@ -1,0 +1,49 @@
+.profile-container {
+    padding: 20px;
+    padding-top: 5%;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .badge {
+    margin: 5px;
+  }
+  
+  .profile-input {
+    margin-bottom: 10px;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .delete-account-button {
+    margin-top: 20px;
+  }
+  
